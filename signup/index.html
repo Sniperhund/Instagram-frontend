@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Sign Up</title>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+            integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <link rel="stylesheet" href="/assets/css/styles.css" />
+        <link rel="stylesheet" href="signup.css" />
+        <script src="/assets/js/app.js" defer></script>
+        <script src="signup.js" defer></script>
+    </head>
+    <body>
+        <form novalidate>
+            <img src="/assets/img/instagram.png" alt="Instagram Logo" />
+            <h2>
+                Opret en profil for at se billeder og videoer fra dine venner.
+            </h2>
+            <label>
+                <span>E-mail</span>
+                <input type="email" name="email" id="email" required />
+            </label>
+            <label>
+                <span>Fulde Navn</span>
+                <input type="text" name="full-name" min="2" required />
+            </label>
+            <label>
+                <span>Brugernavn</span>
+                <input type="text" name="username" min="8" max="32" required />
+            </label>
+            <label>
+                <span>Adgangskode</span>
+                <input
+                    type="password"
+                    name="password"
+                    min="8"
+                    max="32"
+                    pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$"
+                    required
+                />
+            </label>
+
+            <p>
+                Personer, der bruger vores tjeneste, kan have overført dine
+                kontaktoplysninger til Instagram.
+                <span class="link">Læs mere</span>
+                <br />
+                <br />
+                Når du opretter en profil, accepterer du vores
+                <span class="link">vilkår</span>. Læs om, hvordan vi indsamler,
+                bruger og deler dine data i vores
+                <span class="link"
+                    >politik om beskyttelse af personoplysninger</span
+                >
+                samt om, hvordan vi bruger cookies og lignende teknologi i vores
+                <span class="link">politik om cookies</span>.
+            </p>
+            <button class="blue">Næste</button>
+        </form>
+
+        <section>
+            <h3>
+                Har du en konto?
+                <a href="../login">Log på</a>
+            </h3>
+        </section>
+
+        <footer>
+            <ul>
+                <li><a href="#">Meta</a></li>
+                <li><a href="#">Om</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Jobs</a></li>
+                <li><a href="#">Hjælp</a></li>
+                <li><a href="#">API</a></li>
+                <li><a href="#">Beskyttelse af personoplysninger</a></li>
+                <li><a href="#">Vilkår</a></li>
+                <li><a href="#">Lokationer</a></li>
+                <li><a href="#">Instagram Lite</a></li>
+                <li><a href="#">Threads</a></li>
+                <li>
+                    <a href="#">Overførelse af kontakter og ikke-brugere</a>
+                </li>
+                <li><a href="#">Meta Verifier</a></li>
+            </ul>
+            <ul>
+                <li>
+                    <a href="">Dansk<i class="fa-solid fa-angle-down"></i></a>
+                </li>
+                <li><a href="">&copy; 2024 Instagram from Meta</a></li>
+            </ul>
+        </footer>
+    </body>
+</html>
