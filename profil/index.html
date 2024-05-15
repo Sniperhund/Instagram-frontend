@@ -3,11 +3,11 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Instagram</title>
+        <title>Instagram - Profil</title>
         <link rel="stylesheet" href="/assets/css/styles.css" />
         <link rel="stylesheet" href="style.css" />
         <script src="/assets/js/app.js" defer></script>
-        <script src="index.js" defer></script>
+        <script src="profil.js"></script>
     </head>
     <body>
         <nav>
@@ -97,49 +97,51 @@
             </ul>
         </nav>
 
-        <section id="feed-container">
-            <div class="post">
-                <ul class="post-top">
-                    <li>
-                        <img src="https://instagrom.masrmedia.dk/user.png" />
-                    </li>
-                    <li><h2>SpurgtManden123</h2></li>
-                    <li>
-                        <a href="#"><i class="fa-solid fa-ellipsis"></i></a>
-                    </li>
-                </ul>
-                <img src="/assets/img/instagram.png" alt="" />
-                <ul class="post-bar">
-                    <li>
-                        <a href="#"><i class="fa-regular fa-heart"></i></a>
-                    </li>
-                    <li>
-                        <a href="#"
-                            ><i
-                                class="fa-regular fa-comment fa-flip-horizontal"
-                            ></i
-                        ></a>
-                    </li>
-                    <li>
-                        <a href="#"
-                            ><i class="fa-regular fa-paper-plane"></i
-                        ></a>
-                    </li>
-                    <li>
-                        <a href="#"><i class="fa-regular fa-bookmark"></i></a>
-                    </li>
-                </ul>
-                <div class="post-description">
-                    <p>69 Synes godt om</p>
-                    <p>
-                        <strong>SpurgtManden123</strong> Lorem ipsum dolor sit
-                        amet consectetur adipisicing elit. Accusantium ipsum
-                        ipsam molestias iusto voluptatibus architecto illum!
-                        Culpa neque sit facilis odit ipsa. Eum ea eaque quo
-                        assumenda vero commodi dolores!
+        <section id="profil-container">
+            <section id="profil-information">
+                <img src="/assets/img/brugerfoto.jpeg" alt="" />
+                <section class="profil-description">
+                    <ul>
+                        <li><h2>SpurgtManden123</h2></li>
+                        <li>
+                            <a class="btn" href="/profil/redigere"
+                                >Rediger profil</a
+                            >
+                        </li>
+                        <li><a class="btn" href="#">Vis arkiv</a></li>
+                        <li>
+                            <a href="#"><i class="fa-solid fa-gear"></i></a>
+                        </li>
+                    </ul>
+                    <ul class="profil-stats">
+                        <li>
+                            <p><span>0</span> opslag</p>
+                        </li>
+                        <li>
+                            <p><span>0</span> følgere</p>
+                        </li>
+                        <li>
+                            <p><span>0</span> fulgte</p>
+                        </li>
+                    </ul>
+                    <p class="profil-fullname">Jens Jensen</p>
+                    <p class="profil-bio">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Voluptatibus culpa provident vero adipisci aperiam vel
+                        quasi blanditiis quos quidem debitis.
                     </p>
-                </div>
-            </div>
+                </section>
+            </section>
+            <span class="breakline"></span>
+            <section id="profil-gallery">
+                <img src="/assets/img/brugerfoto.jpeg" alt="" />
+                <img src="/assets/img/brugerfoto.jpeg" alt="" />
+                <img src="/assets/img/brugerfoto.jpeg" alt="" />
+                <img src="/assets/img/brugerfoto.jpeg" alt="" />
+                <img src="/assets/img/brugerfoto.jpeg" alt="" />
+                <img src="/assets/img/brugerfoto.jpeg" alt="" />
+                <img src="/assets/img/brugerfoto.jpeg" alt="" />
+            </section>
         </section>
     </body>
 </html>

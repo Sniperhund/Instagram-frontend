@@ -32,5 +32,3 @@ function checkIfLoggedIn() {
 
     window.location.href = "/login/"
 }
-
-checkIfLoggedIn()

@@ -1,0 +1,97 @@
+#profil-container {
+    max-width: 935px;
+    width: 100%;
+    padding: 30px 20px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    #profil-information {
+        display: flex;
+
+        img {
+            aspect-ratio: 1/1;
+            object-fit: cover;
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            margin-right: 50px;
+            margin-left: 50px;
+        }
+
+        .profil-description {
+            h2 {
+                color: #fff;
+            }
+            ul {
+                list-style: none;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                li {
+                    .btn {
+                        border: 0;
+                        border-radius: 7px;
+                        padding: 7px 16px;
+                        font-size: 14px;
+                        background-color: #363636;
+                        color: #fff;
+                        font-weight: 600;
+                    }
+                    a {
+                        text-decoration: none;
+                        color: #fff;
+                        font-size: 24px;
+                    }
+                }
+            }
+        }
+
+        .profil-stats {
+            margin-top: 20px;
+            width: 65%;
+            display: flex;
+            justify-content: space-between;
+
+            li {
+                p {
+                    color: #fff;
+                    font-size: 16px;
+
+                    span {
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
+
+        .profil-fullname {
+            color: #fff;
+            margin-top: 20px;
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        .profil-bio {
+            color: #fff;
+        }
+    }
+
+    .breakline {
+        height: 1px;
+        background-color: #262626;
+        margin: 30px 0;
+    }
+
+    #profil-gallery {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 3px;
+
+        img {
+            max-width: 100%;
+            aspect-ratio: 1/1;
+            object-fit: cover;
+            background-color: #fff;
+        }
+    }
+}

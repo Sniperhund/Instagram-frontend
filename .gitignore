@@ -32,3 +32,5 @@ jspm_packages/
 # Build artifacts
 *.min.js
 *.min.css
+
+assets/img/brugerfoto.jpeg
