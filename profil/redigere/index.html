@@ -7,7 +7,7 @@
         <link rel="stylesheet" href="/assets/css/styles.css" />
         <link rel="stylesheet" href="style.css" />
         <script src="/assets/js/app.js" defer></script>
-        <script src="edit.js"></script>
+        <script src="edit.js" defer></script>
     </head>
     <body>
         <nav>
@@ -87,11 +87,14 @@
                         <p>Threads</p></a
                     >
                 </li>
-                <li>
-                    <a href="#"
-                        ><i class="fa-solid fa-bars"></i>
-                        <p>Mere</p></a
-                    >
+                <li id="more">
+                    <a onclick="more(event)">
+                        <i class="fa-solid fa-bars"></i>
+                        <p>Mere</p>
+                    </a>
+                    <div id="context-menu">
+                        <a>Log out</a>
+                    </div>
                 </li>
             </ul>
         </nav>
@@ -106,18 +109,23 @@
 
                     <div>
                         <p>Brugernavn</p>
-                        <button>Skift profilbillede</button>
+                        <button
+                            onclick="show()"
+                            data-micromodal-trigger="modal-1"
+                        >
+                            Skift profilbillede
+                        </button>
+                    </div>
                     </div>
                 </article>
             </section>
         </main>
-
-        <div id="profileImage" class="modal">
-            <!-- Modal content -->
-            <div class="modal-content">
-                <span class="close">&times;</span>
-                <p>Some text in the Modal..</p>
+        <div id="modal-container">
+            <div class="modal">
+                <p>Skrift billede</p>
+                <button>Overfør billede</button>
+                <button>Fjern det nuværende billede</button>
+                <button>Annuller</button>
             </div>
-        </div>
     </body>
 </html>

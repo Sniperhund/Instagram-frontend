@@ -35,3 +35,43 @@ main {
         }
     }
 }
+
+#modal-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    background-color: #00000080;
+    position: absolute;
+
+    .modal {
+        max-width: 400px;
+        width: 100%;
+        border-radius: 12px;
+
+        p {
+            padding: 20px;
+            background-color: #333;
+        }
+
+        button {
+            width: 100%;
+            border: 0;
+            padding: 10px;
+        }
+
+        :nth-child(1) {
+            color: #f5f5f5;
+        }
+        :nth-child(2) {
+            color: #0095f6;
+        }
+        :nth-child(3) {
+            color: #ed4956;
+        }
+        :nth-child(4) {
+            color: #f5f5f5;
+        }
+    }
+}

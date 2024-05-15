@@ -88,10 +88,12 @@
         gap: 3px;
 
         img {
+            z-index: 999;
             max-width: 100%;
             aspect-ratio: 1/1;
             object-fit: cover;
             background-color: #fff;
+            cursor: pointer;
         }
     }
 }

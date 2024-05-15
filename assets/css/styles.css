@@ -142,3 +142,21 @@ nav {
         }
     }
 }
+
+#more {
+    position: relative;
+}
+
+#context-menu {
+    display: none;
+    position: absolute;
+    bottom: 100%;
+    width: 100%;
+    background-color: rgb(38, 38, 38);
+    border-radius: 12px;
+    padding: 12px;
+}
+
+.open {
+    display: block !important;
+}

@@ -7,7 +7,7 @@
         <link rel="stylesheet" href="/assets/css/styles.css" />
         <link rel="stylesheet" href="style.css" />
         <script src="/assets/js/app.js" defer></script>
-        <script src="profil.js"></script>
+        <script src="profil.js" defer></script>
     </head>
     <body>
         <nav>
@@ -88,18 +88,21 @@
                         <p>Threads</p></a
                     >
                 </li>
-                <li>
-                    <a href="#"
-                        ><i class="fa-solid fa-bars"></i>
-                        <p>Mere</p></a
-                    >
+                <li id="more">
+                    <a onclick="more(event)">
+                        <i class="fa-solid fa-bars"></i>
+                        <p>Mere</p>
+                    </a>
+                    <div id="context-menu">
+                        <a>Log out</a>
+                    </div>
                 </li>
             </ul>
         </nav>
 
         <section id="profil-container">
             <section id="profil-information">
-                <img src="/assets/img/brugerfoto.jpeg" alt="" />
+                <img src="/assets/img/srdjan.jpg" alt="" />
                 <section class="profil-description">
                     <ul>
                         <li><h2>SpurgtManden123</h2></li>
@@ -134,13 +137,13 @@
             </section>
             <span class="breakline"></span>
             <section id="profil-gallery">
-                <img src="/assets/img/brugerfoto.jpeg" alt="" />
-                <img src="/assets/img/brugerfoto.jpeg" alt="" />
-                <img src="/assets/img/brugerfoto.jpeg" alt="" />
-                <img src="/assets/img/brugerfoto.jpeg" alt="" />
-                <img src="/assets/img/brugerfoto.jpeg" alt="" />
-                <img src="/assets/img/brugerfoto.jpeg" alt="" />
-                <img src="/assets/img/brugerfoto.jpeg" alt="" />
+                <img src="/assets/img/srdjan.jpg" alt="" />
+                <img src="/assets/img/srdjan.jpg" alt="" />
+                <img src="/assets/img/srdjan.jpg" alt="" />
+                <img src="/assets/img/srdjan.jpg" alt="" />
+                <img src="/assets/img/srdjan.jpg" alt="" />
+                <img src="/assets/img/srdjan.jpg" alt="" />
+                <img src="/assets/img/srdjan.jpg" alt="" />
             </section>
         </section>
     </body>

@@ -32,3 +32,11 @@ function checkIfLoggedIn() {
 
     window.location.href = "/login/"
 }
+
+function more(event) {
+    event.preventDefault()
+
+    const ctxMenu = document.getElementById("context-menu")
+
+    ctxMenu.classList.toggle("open")
+}
