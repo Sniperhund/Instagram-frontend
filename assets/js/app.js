@@ -40,3 +40,5 @@ function more(event) {
 
     ctxMenu.classList.toggle("open")
 }
+
+function logout(event) {}
