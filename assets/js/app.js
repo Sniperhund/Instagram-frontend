@@ -41,4 +41,14 @@ function more(event) {
     ctxMenu.classList.toggle("open")
 }
 
-function logout(event) {}
+function login(accesstoken) {
+    setCookie("accessToken", accesstoken, 1)
+    window.location.href = "/"
+}
+
+function logout(event) {
+    event.preventDefault()
+
+    setCookie("accessToken", "", -1)
+    window.location.href = "/login/"
+}
