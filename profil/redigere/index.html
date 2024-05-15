@@ -93,7 +93,7 @@
                         <p>Mere</p>
                     </a>
                     <div id="context-menu">
-                        <a>Log out</a>
+                        <a onclick="logout(event)">Log out</a>
                     </div>
                 </li>
             </ul>
@@ -110,8 +110,7 @@
                     <div>
                         <p>Brugernavn</p>
                         <button
-                            onclick="show()"
-                            data-micromodal-trigger="modal-1"
+                            onclick="toggleModal()"
                         >
                             Skift profilbillede
                         </button>
@@ -121,11 +120,11 @@
             </section>
         </main>
         <div id="modal-container">
-            <div class="modal">
-                <p>Skrift billede</p>
+            <div id="modal">
+                <p>Skift profilbillede</p>
                 <button>Overfør billede</button>
                 <button>Fjern det nuværende billede</button>
-                <button>Annuller</button>
+                <button onclick="toggleModal()">Annuller</button>
             </div>
     </body>
 </html>
