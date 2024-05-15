@@ -17,7 +17,7 @@
         <script src="signup.js" defer></script>
     </head>
     <body>
-        <form novalidate>
+        <form>
             <img src="/assets/img/instagram.png" alt="Instagram Logo" />
             <h2>
                 Opret en profil for at se billeder og videoer fra dine venner.
@@ -28,11 +28,11 @@
             </label>
             <label>
                 <span>Fulde Navn</span>
-                <input type="text" name="full-name" min="2" required />
+                <input type="text" name="fullName" min="2" required />
             </label>
             <label>
                 <span>Brugernavn</span>
-                <input type="text" name="username" min="8" max="32" required />
+                <input type="text" name="username" min="1" max="30" required />
             </label>
             <label>
                 <span>Adgangskode</span>
@@ -67,7 +67,7 @@
         <section>
             <h3>
                 Har du en konto?
-                <a href="../login">Log på</a>
+                <a href="/login">Log på</a>
             </h3>
         </section>
 
