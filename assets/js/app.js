@@ -1,3 +1,5 @@
+window.user = null
+
 function setCookie(cname, cvalue, exdays) {
     const d = new Date()
     d.setTime(d.getTime() + exdays * 24 * 60 * 60 * 1000)
@@ -36,18 +38,15 @@ function checkIfLoggedIn() {
 checkIfLoggedIn()
 
 function updateProfilePicture() {
-    fetch("https://instagrom.masrmedia.dk/api/user", {
-        headers: {
-            Authorization: getCookie("accessToken"),
-        },
-    })
-        .then((res) => res.json())
+    getUser()
         .then((data) => {
             const profiles = document.getElementsByClassName("profilePicture")
 
             for (let element of profiles) {
-                element.src = data.avatar
+                element.src = `https://instagrom.masrmedia.dk/${data.avatar}`
             }
+        }).catch((err) => {
+            console.error(err)
         })
 }
 
@@ -72,3 +71,25 @@ function logout(event) {
     setCookie("accessToken", "", -1)
     window.location.href = "/login/"
 }
+
+function getUser() {
+    return new Promise((resolve, reject) => {
+        if (!getCookie("accessToken")) reject("Not logged in")
+        fetch("https://instagrom.masrmedia.dk/api/user", {
+            headers: {
+                Authorization: getCookie("accessToken"),
+            },
+        })
+            .then((res) => res.json())
+            .then((data) => {
+                data.id = data._id
+                window.user = data
+                resolve(data)
+            })
+            .catch((err) => {
+                reject(err)
+            })
+    })
+}
+
+getUser()
