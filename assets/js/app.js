@@ -45,7 +45,8 @@ function updateProfilePicture() {
             for (let element of profiles) {
                 element.src = `https://instagrom.masrmedia.dk/${data.avatar}`
             }
-        }).catch((err) => {
+        })
+        .catch((err) => {
             console.error(err)
         })
 }
@@ -93,3 +94,49 @@ function getUser() {
 }
 
 getUser()
+
+const modalOpretContainer = document.getElementById("upload-modal-container")
+
+function toggleOpretModal() {
+    modalOpretContainer.classList.toggle("active-opret")
+
+    if (!modalOpretContainer.classList.contains("active-opret")) {
+        const modalContent = document.getElementById("upload-modal-content")
+        const firstStage = document.getElementById("first-stage")
+        const secondStage = document.getElementById("second-stage")
+        const delKnap = document.getElementById("del")
+
+        firstStage.style.display = "flex"
+        secondStage.style.display = "none"
+        modalContent.classList.remove("content-second-stage")
+        delKnap.style.display = "none"
+    }
+}
+
+function uploadImage(event) {
+    event.preventDefault()
+
+    const fileInput = document.createElement("input")
+    fileInput.type = "file"
+    fileInput.accept = "image/*"
+    fileInput.onchange = (e) => {
+        const file = e.target.files[0]
+
+        console.log(file)
+
+        const modalContent = document.getElementById("upload-modal-content")
+        const firstStage = document.getElementById("first-stage")
+        const secondStage = document.getElementById("second-stage")
+        const delKnap = document.getElementById("del")
+        const image = document.getElementById("post-image")
+
+        firstStage.style.display = "none"
+        secondStage.style.display = "flex"
+        modalContent.classList.add("content-second-stage")
+        delKnap.style.display = "block"
+
+        image.src = URL.createObjectURL(file)
+    }
+
+    fileInput.click()
+}

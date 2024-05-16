@@ -11,9 +11,54 @@
     </head>
     <body>
         <nav>
+            <div id="upload-modal-container">
+                <div class="upload-modal">
+                    <div id="top">
+                        <h3>Opret nyt opslag</h3>
+                        <a id="del">Del</a>
+                    </div>
+                    <div id="upload-modal-content">
+                        <div id="first-stage">
+                            <i class="fa-regular fa-file-image"></i>
+                            <h4>Træk billeder hertil.</h4>
+                            <a href="#" onclick="uploadImage(event)"
+                                >Vælg fra computer</a
+                            >
+                        </div>
+                        <div id="second-stage">
+                            <img id="post-image" />
+
+                            <div id="upload-comment">
+                                <ul>
+                                    <li>
+                                        <img
+                                            src="https://instagrom.masrmedia.dk/user.png"
+                                            class="profilePicture"
+                                        />
+                                        <h2>username</h2>
+                                    </li>
+                                    <li style="height: 100%">
+                                        <textarea
+                                            name="comment"
+                                            placeholder="Skriv en undertekst ..."
+                                        ></textarea>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <i
+                    id="closeBtn"
+                    class="fa-solid fa-xmark"
+                    onclick="toggleOpretModal()"
+                ></i>
+            </div>
+
             <ul>
                 <li>
-                    <a href="/index">
+                    <a href="/">
                         <svg
                             aria-label="Instagram"
                             fill="white"
@@ -35,7 +80,7 @@
                     ></a>
                 </li>
                 <li>
-                    <a href="/index"
+                    <a href="/"
                         ><i class="fa-solid fa-house"></i>
                         <p>Startside</p></a
                     >
@@ -71,14 +116,17 @@
                     >
                 </li>
                 <li>
-                    <a href="#"
+                    <a href="#" onclick="toggleOpretModal()"
                         ><i class="fa-solid fa-square-plus"></i>
                         <p>Opret</p></a
                     >
                 </li>
                 <li>
                     <a href="/profil">
-                        <img src="https://instagrom.masrmedia.dk/user.png" />
+                        <img
+                            src="https://instagrom.masrmedia.dk/user.png"
+                            class="profilePicture"
+                        />
                         <p>Profil</p></a
                     >
                 </li>

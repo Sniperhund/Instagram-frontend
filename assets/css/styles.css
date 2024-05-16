@@ -85,6 +85,7 @@ nav {
 
             a:hover {
                 background-color: rgba(255, 255, 255, 0.1);
+                cursor: pointer;
 
                 i,
                 img {
@@ -109,6 +110,140 @@ nav {
             }
         }
     }
+    #upload-modal-container {
+        display: none;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.5);
+        color: #fff;
+        z-index: 999;
+
+        .upload-modal {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: rgb(38, 38, 38);
+            border-radius: 10px;
+
+            h3 {
+                padding: 10px 0;
+                width: 100%;
+                text-align: center;
+                border-bottom: 1px solid #333;
+            }
+
+            #upload-modal-content {
+                width: 855px;
+                transition: width 1s ease-in-out;
+
+                #first-stage {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 10px;
+                    height: 855px;
+                    width: 100%;
+
+                    i {
+                        font-size: 90px;
+                    }
+
+                    h4 {
+                        color: #fff;
+                        font-size: 20px;
+                    }
+
+                    a {
+                        text-decoration: none;
+                        background-color: #0095f6;
+                        padding: 7px 16px;
+                        border-radius: 5px;
+                        color: #fff;
+                        font-size: 14px;
+                    }
+                }
+
+                #second-stage {
+                    display: none;
+                    height: 855px;
+
+                    img {
+                        width: 855px;
+                        object-fit: cover;
+                        border-radius: 0 0 0 10px;
+                    }
+                    #upload-comment {
+                        display: flex;
+                        flex-direction: column;
+                        width: 100%;
+                        ul {
+                            width: 100%;
+                            display: flex;
+                            list-style: none;
+                            img {
+                                border-radius: 50%;
+                                aspect-ratio: 1/1;
+                                width: 30px;
+                                margin-right: 10px;
+                            }
+                            h2 {
+                                font-size: 24px;
+                                line-height: 24px;
+                            }
+                            textarea {
+                                resize: none;
+                                width: 100%;
+                                background-color: transparent;
+                                border: none;
+                                outline: none;
+                                font-size: 1.6rem;
+                                height: 100%;
+                                color: #fff;
+                            }
+                        }
+                    }
+                }
+            }
+
+            #top {
+                width: 100%;
+                position: relative;
+                display: flex;
+            }
+        }
+
+        #closeBtn {
+            position: absolute;
+            right: 20px;
+            top: 20px;
+            color: #fff;
+            font-size: 50px;
+            cursor: pointer;
+        }
+
+        #del {
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 1.8rem;
+            color: var(--accent);
+            cursor: pointer;
+            display: none;
+        }
+    }
+}
+
+.content-second-stage {
+    width: 1200px !important;
+}
+
+.active-opret {
+    display: flex !important;
 }
 
 @media screen and (max-width: 1200px) {
