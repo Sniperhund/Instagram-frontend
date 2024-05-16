@@ -7,13 +7,34 @@ fetch("https://instagrom.masrmedia.dk/api/user", {
 })
     .then((res) => res.json())
     .then((data) => {
-        var profileImages = "https://instagrom.masrmedia.dk/" + data.images
+        fetch("https://instagrom.masrmedia.dk/api/user/"+window.user.id+"/posts", {
+    headers: {
+        Authorization: getCookie("accessToken"),
+    },
+})
+    .then((res) => res.json())
+    .then((data) => {
+        for (let post of data) {
+            const postImg = document.createElement("img")
+            postImg.src = `https://instagrom.masrmedia.dk/${post.image}`
+            profilGallery.appendChild(postImg)
+        }
+    }).catch((err) => {
+        console.error(err)
+    })
+        var profileImages = document.querySelectorAll(".profilePicture")
 
         for (let imageSrc of profileImages) {
-            var image = profilGallery.createElement("img")
-
-            image.src = "https://instagrom.masrmedia.dk/" + data.avatar
+            imageSrc.src = `https://instagrom.masrmedia.dk/${data.avatar}`
         }
+
+        var brugernavn = document.getElementById("username")
+        brugernavn.innerText = data.username
+        var fullName = document.querySelector(".profil-fullname")
+        fullName.innerText = data.fullName
+    })
+    .catch((err) => {
+        console.error(err)
     })
 
 var images = document.querySelectorAll("#profil-gallery img")

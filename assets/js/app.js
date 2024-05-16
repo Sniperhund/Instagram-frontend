@@ -113,6 +113,8 @@ function toggleOpretModal() {
     }
 }
 
+let uploadFile;
+
 function uploadImage(event) {
     event.preventDefault()
 
@@ -122,15 +124,20 @@ function uploadImage(event) {
     fileInput.onchange = (e) => {
         const file = e.target.files[0]
 
-        console.log(file)
+        if (!file) return
+        uploadFile = file
 
         const modalContent = document.getElementById("upload-modal-content")
         const firstStage = document.getElementById("first-stage")
         const secondStage = document.getElementById("second-stage")
         const delKnap = document.getElementById("del")
         const image = document.getElementById("post-image")
+        const pfp = document.querySelector("#upload-comment li:nth-child(1) img") 
+        const usernameEl = document.querySelector("#upload-comment li:nth-child(1) h2")
 
         firstStage.style.display = "none"
+        usernameEl.innerHTML = window.user.username
+        pfp.src = `https://instagrom.masrmedia.dk/${window.user.avatar}`
         secondStage.style.display = "flex"
         modalContent.classList.add("content-second-stage")
         delKnap.style.display = "block"
@@ -139,4 +146,29 @@ function uploadImage(event) {
     }
 
     fileInput.click()
+}
+
+const postContent = document.querySelector("textarea[name='comment']")
+const postButton = document.getElementById("del")
+
+if(postButton) {
+    postButton.addEventListener("click", async () => {
+        const formData = new FormData()
+        formData.append("image", uploadFile)
+        formData.append("content", postContent.value)
+
+        const res = await fetch("https://instagrom.masrmedia.dk/api/user/"+window.user.id+"/posts", {
+            method: "POST",
+            body: formData,
+            headers: {
+                Authorization: getCookie("accessToken"),
+            },
+        })
+
+        if (res.ok) {
+            const data = await res.json()
+            
+            toggleOpretModal()
+        }
+    })
 }
