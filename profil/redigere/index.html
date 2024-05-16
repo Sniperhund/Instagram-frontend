@@ -78,7 +78,7 @@
                 </li>
                 <li>
                     <a href="/profil">
-                        <img src="https://instagrom.masrmedia.dk/user.png" />
+                        <img src="https://instagrom.masrmedia.dk/user.png" id="" />
                         <p>Profil</p></a
                     >
                 </li>
@@ -123,8 +123,8 @@
         <div id="modal-container">
             <div id="modal">
                 <p>Skift profilbillede</p>
-                <button>Overfør billede</button>
-                <button>Fjern det nuværende billede</button>
+                <button onclick="upload(event)">Overfør billede</button>
+                <button onclick="remove(event)">Fjern det nuværende billede</button>
                 <button onclick="toggleModal()">Annuller</button>
             </div>
     </body>
