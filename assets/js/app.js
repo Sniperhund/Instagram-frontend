@@ -33,6 +33,26 @@ function checkIfLoggedIn() {
     window.location.href = "/login/"
 }
 
+checkIfLoggedIn()
+
+function updateProfilePicture() {
+    fetch("https://instagrom.masrmedia.dk/api/user", {
+        headers: {
+            Authorization: getCookie("accessToken"),
+        },
+    })
+        .then((res) => res.json())
+        .then((data) => {
+            const profiles = document.getElementsByClassName("profilePicture")
+
+            for (let element of profiles) {
+                element.src = data.avatar
+            }
+        })
+}
+
+updateProfilePicture()
+
 function more(event) {
     event.preventDefault()
 

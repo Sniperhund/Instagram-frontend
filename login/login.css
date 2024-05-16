@@ -6,6 +6,8 @@ body {
     gap: 10px;
     flex-grow: 1;
     height: 100vh;
+
+    background-color: white;
 }
 
 main {

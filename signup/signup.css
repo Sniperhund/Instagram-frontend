@@ -5,6 +5,8 @@ body {
     margin-top: 12px;
     gap: 10px;
     height: 100vh;
+
+    background-color: white;
 }
 
 form {
