@@ -34,7 +34,7 @@ function fetchFeed() {
                     <li>
                         <a href="#"
                             ><i
-                                class="fa-regular fa-comment fa-flip-horizontal"
+                                class="fa-regular fa-comment"
                             ></i
                         ></a>
                     </li>
