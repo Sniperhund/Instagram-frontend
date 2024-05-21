@@ -8,7 +8,7 @@ function fetchFeed() {
     })
         .then((res) => res.json())
         .then((data) => {
-            console.log(data);
+            console.log(data)
             for (let post of data) {
                 const postElement = document.createElement("div")
                 postElement.classList.add("post")
@@ -26,7 +26,7 @@ function fetchFeed() {
                         <a href="#"><i class="fa-solid fa-ellipsis"></i></a>
                     </li>
                 </ul>
-                <img src="https://instagrom.masrmedia.dk/${post.image}" alt="" />
+                <img src="https://instagrom.masrmedia.dk/${post.image}" alt="" style="max-width: 1000px" />
                 <ul class="post-bar">
                     <li>
                         <a href="#"><i class="fa-regular fa-heart"></i></a>
