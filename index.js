@@ -26,7 +26,7 @@ function fetchFeed() {
                         <a href="#"><i class="fa-solid fa-ellipsis"></i></a>
                     </li>
                 </ul>
-                <img src="https://instagrom.masrmedia.dk/${post.image}" alt="" style="max-width: 1000px" />
+                <img src="https://instagrom.masrmedia.dk/${post.image}" alt="" style="max-height: 1000px" />
                 <ul class="post-bar">
                     <li>
                         <a href="#"><i class="fa-regular fa-heart"></i></a>
