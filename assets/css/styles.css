@@ -34,7 +34,7 @@ nav {
     border-right: 1px solid rgb(38, 38, 38);
     width: 300px;
     height: 100vh;
-    position: sticky;
+    position: fixed;
 
     a {
         color: white;
